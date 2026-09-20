@@ -1,0 +1,192 @@
+.footer {
+    width: 100%;
+
+    margin-top: 60px;
+
+    background-color: #0b3d91;
+    color: #ffffff;
+}
+
+
+/* -------------------------
+   CONTENEDOR PRINCIPAL
+------------------------- */
+
+.footer-contenedor {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 55px 0 45px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+
+    gap: 50px;
+}
+
+
+/* -------------------------
+   MARCA
+------------------------- */
+
+.footer-marca h2 {
+    margin: 0 0 15px;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.footer-marca p {
+    max-width: 300px;
+
+    margin: 0;
+
+    color: #dbe7f8;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* -------------------------
+   SECCIONES
+------------------------- */
+
+.footer-seccion h3 {
+    margin: 0 0 18px;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.footer-seccion ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 11px;
+}
+
+.footer-seccion li {
+    color: #dbe7f8;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.footer-seccion li:hover {
+    color: #ffffff;
+}
+
+
+/* -------------------------
+   PARTE INFERIOR
+------------------------- */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 20px 0;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #c9d8ee;
+
+    font-size: 13px;
+}
+
+
+/* -------------------------
+   REDES
+------------------------- */
+
+.footer-redes {
+    display: flex;
+
+    gap: 20px;
+}
+
+.footer-redes span {
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease;
+}
+
+.footer-redes span:hover {
+    opacity: 0.7;
+}
+
+
+/* -------------------------
+   TABLET
+------------------------- */
+
+@media (max-width: 900px) {
+
+    .footer-contenedor {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+/* -------------------------
+   CELULAR
+------------------------- */
+
+@media (max-width: 600px) {
+
+    .footer-contenedor {
+        width: 85%;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+
+        padding: 40px 0;
+    }
+
+    .footer-bottom {
+        width: 85%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .footer-redes {
+        gap: 15px;
+    }
+
+}

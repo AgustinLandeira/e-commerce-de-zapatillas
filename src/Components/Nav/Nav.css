@@ -1,0 +1,122 @@
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: #1a1a1a;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: color 0.2s ease;
+}
+
+/* Hover */
+
+nav li:hover {
+    color: #0b3d91;
+}
+
+/* Línea debajo del elemento */
+
+nav li::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #0b3d91;
+
+    transition: width 0.25s ease;
+}
+
+nav li:hover::after {
+    width: 100%;
+}
+
+/* Carrito */
+
+nav li:last-child {
+    background-color: #0b3d91;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 6px;
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+nav li:last-child:hover {
+    background-color: #082f70;
+
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+nav li:last-child::after {
+    display: none;
+}
+
+.link{
+
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        gap: 20px;
+    }
+
+    nav li {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav li {
+        font-size: 13px;
+    }
+
+    nav li:last-child {
+        padding: 8px 12px;
+    }
+
+}

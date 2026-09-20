@@ -1,0 +1,176 @@
+/* =========================
+   SECCIÓN DE BIENVENIDA
+========================= */
+
+.contenedor-bienvenida {
+    width: 100%;
+    min-height: 100vh;
+    
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/img/footware/portada.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    background-color: black;
+
+    overflow: hidden;
+}
+
+/* =========================
+   CAPA OSCURA SOBRE LA IMAGEN
+========================= */
+
+.contenedor-bienvenida::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.70),
+        rgba(0, 0, 0, 0.25)
+    );
+}
+
+
+/* =========================
+   CONTENIDO
+========================= */
+
+.bienvenidad-contenido {
+    position: relative;
+    z-index: 1;
+
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 40px 20px;
+}
+
+
+/* TÍTULO */
+
+.bienvenidad-contenido h1 {
+    margin: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(32px, 5vw, 58px);
+
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    letter-spacing: -1px;
+}
+
+
+/* DESCRIPCIÓN */
+
+.bienvenidad-contenido p {
+    margin: 0 auto 35px;
+
+    color: #f0f4f8;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   BOTÓN
+========================= */
+
+.bienvenidad-contenido button {
+    background-color: #0b3d91;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 14px 28px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* LINK DENTRO DEL BOTÓN */
+
+.bienvenidad-contenido button a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* HOVER */
+
+.bienvenidad-contenido button:hover {
+    background-color: #082f70;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .contenedor-bienvenida {
+        min-height: calc(100vh - 140px);
+    }
+
+    .bienvenidad-contenido h1 {
+        font-size: 38px;
+    }
+
+    .bienvenidad-contenido p {
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .bienvenidad-contenido h1 {
+        font-size: 32px;
+    }
+
+    .bienvenidad-contenido p {
+        font-size: 16px;
+    }
+
+    .bienvenidad-contenido button {
+        padding: 12px 22px;
+    }
+
+}

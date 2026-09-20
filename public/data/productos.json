@@ -1,0 +1,90 @@
+[
+    {
+        "id":1,
+        "nombre":"Van Star",
+        "precio":120000,
+        "marca":"Vans",
+        "stock":4,
+        "imagen":"/img/footware/vans_star.jpg"
+    },
+    {
+        "id":2,
+        "nombre":"Vans gotita",
+        "precio":150000,
+        "marca":"Vans",
+        "stock":6,
+        "imagen":"/img/footware/vans_gotitas.jpg"
+    },
+    {
+        "id":3,
+        "nombre":"braknet",
+        "precio":80000,
+        "marca":"Adidas",
+        "stock":3,
+        "imagen":"/img/footware/adidas_breaknet.jpg"
+    },
+    {
+        "id":4,
+        "nombre":"courtblock",
+        "precio":95000,
+        "marca":"Adidas",
+        "stock":8,
+        "imagen":"/img/footware/adidas-courtblock.jpg"
+    },
+    {
+        "id":5,
+        "nombre":"dorp baige",
+        "precio":70000,
+        "marca":"Adidas",
+        "stock":2,
+        "imagen":"/img/footware/dorp_beige.jpg"
+    },
+    {
+        "id":6,
+        "nombre":"forum low",
+        "precio":200000,
+        "marca":"Adidas",
+        "stock":10,
+        "imagen":"/img/footware/Forum_Low.jpg"
+    },
+    {
+        "id":7,
+        "nombre":"Running accure Azul",
+        "precio":60000,
+        "marca":"Adidas",
+        "stock":4,
+        "imagen":"/img/footware/running_1.jpg"
+    },
+    {
+        "id":8,
+        "nombre":"Running accure gris",
+        "precio":50000,
+        "marca":"Adidas",
+        "stock":2,
+        "imagen":"/img/footware/running_2.jpg"
+    },
+    {
+        "id":9,
+        "nombre":"nike running negro",
+        "precio":100000,
+        "marca":"Nike",
+        "stock":4,
+        "imagen":"/img/footware/running_3.jpg"
+    },
+    {
+        "id":10,
+        "nombre":"Nike ranger",
+        "precio":130000,
+        "marca":"Nike",
+        "stock":12,
+        "imagen":"/img/footware/running_4.jpg"
+    },
+    {
+        "id":11,
+        "nombre":"Nike power",
+        "precio":250000,
+        "marca":"Nike",
+        "stock":5,
+        "imagen":"/img/footware/running_5.jpg"
+    }
+]

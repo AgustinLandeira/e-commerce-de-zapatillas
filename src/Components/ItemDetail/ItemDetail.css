@@ -1,0 +1,219 @@
+.detalle-producto {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+/* =========================
+   CONTENEDOR DEL PRODUCTO
+========================= */
+
+.detalle-producto .producto {
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+
+    display: contents;
+}
+
+.detalle-producto .producto:hover {
+    transform: none;
+}
+
+
+/* =========================
+   IMAGEN
+========================= */
+
+.detalle-producto .producto-imagen {
+    width: 100%;
+    height: 550px;
+
+    background-color: #f5f8fc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.detalle-producto .producto-imagen img {
+    width: 90%;
+    height: 90%;
+
+    object-fit: contain;
+
+    padding: 20px;
+
+    transition: transform 0.3s ease;
+}
+
+.detalle-producto .producto-imagen img:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   INFORMACIÓN
+========================= */
+
+.detalle-producto .producto-info {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* Marca */
+
+.detalle-producto .producto-marca {
+    color: #0b3d91;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Nombre */
+
+.detalle-producto .producto-nombre{
+    color: #172033;
+
+    font-size: 36px;
+    line-height: 1.2;
+
+    margin: 0 0 20px;
+}
+
+
+/* Precio */
+
+.detalle-producto .producto-precio {
+    color: #111827;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    margin: 10px 0 15px;
+}
+
+
+/* Stock */
+
+.detalle-producto .producto-stock {
+    font-size: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BOTÓN AGREGAR
+========================= */
+
+.btn-agregar {
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #0b3d91;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-agregar:hover {
+    background-color: #082f70;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .detalle-producto {
+        grid-template-columns: 1fr;
+
+        width: 92%;
+
+        margin: 30px auto;
+    }
+
+    .detalle-producto .producto-imagen {
+        height: 400px;
+    }
+
+    .detalle-producto .producto-info {
+        padding: 35px;
+    }
+
+    .detalle-producto .producto-nombre {
+        font-size: 28px;
+    }
+
+    .detalle-producto .producto-precio {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .detalle-producto {
+        width: 94%;
+    }
+
+    .detalle-producto .producto-imagen {
+        height: 300px;
+    }
+
+    .detalle-producto .producto-info {
+        padding: 25px;
+    }
+
+    .detalle-producto .producto-nombre {
+        font-size: 24px;
+    }
+
+    .detalle-producto .producto-precio {
+        font-size: 22px;
+    }
+}
