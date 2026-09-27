@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
+import './ItemDetailContainer.css'
+
 import { BeatLoader } from "react-spinners";
 
 export const ItemDetailContainer = ()=>{
@@ -26,7 +28,8 @@ export const ItemDetailContainer = ()=>{
             }
 
             return res.json()
-        }).then((data)=> {
+        })
+        .then((data)=> {
 
             const producto = data.find((product)=> String(product.id )===id)
             console.log(producto)
@@ -36,9 +39,13 @@ export const ItemDetailContainer = ()=>{
 
     },[id])
 
-    if(loading){return(
+    if(loading){
+        console.log("pase por aca")
+        return(
         
-        <BeatLoader color="#1015f4" speedMultiplier={0.8} />
+        <div className="loader-container">
+            <BeatLoader color="#1015f4" speedMultiplier={0.8} />
+        </div>
     )}
 
     if(error){return <p>Error: {error}</p>}
