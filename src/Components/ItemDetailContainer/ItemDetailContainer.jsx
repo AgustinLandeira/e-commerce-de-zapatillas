@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 
+import { BeatLoader } from "react-spinners";
 
 export const ItemDetailContainer = ()=>{
     const {id} = useParams();
@@ -35,7 +36,10 @@ export const ItemDetailContainer = ()=>{
 
     },[id])
 
-    if(loading){return <p>Cargando......</p>}
+    if(loading){return(
+        
+        <BeatLoader color="#1015f4" speedMultiplier={0.8} />
+    )}
 
     if(error){return <p>Error: {error}</p>}
 

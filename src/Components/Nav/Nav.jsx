@@ -10,7 +10,7 @@ export const Nav = ()=>{
                 <ul>
                     <li> <Link className='link' to="/">Inicio</Link></li>
                     <li> <Link className='link' to="/productos">Productos</Link></li>
-                    <li>Carrito 🛒</li>
+                    <li> <Link className='link' to="/carrito">Carrito 🛒</Link></li>
                 </ul>
 
             </nav>
