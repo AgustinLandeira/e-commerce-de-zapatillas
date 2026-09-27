@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react"
 import { Itemlist } from "../ItemList/ItemList"
-
-import './ItemListContainer.css'
-
-import { RingLoader } from "react-spinners";
+import { SpinnerLoader } from "../SpinnerLoader/SpinnerLoader";
 
 export const ItemListContainer = ()=>{
 
@@ -30,11 +27,7 @@ export const ItemListContainer = ()=>{
     },[])
 
     if(load){return(
-        <div className="loader-container">
-            
-
-            <RingLoader color="#0d11c6" size={96} />
-        </div>
+        <SpinnerLoader></SpinnerLoader>
     )}
 
     if(error){return <p>Error: {error}</p>}

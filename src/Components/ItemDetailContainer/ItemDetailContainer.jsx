@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import {useParams} from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
+import { SpinnerLoader } from '../SpinnerLoader/SpinnerLoader';
 
 
 export const ItemDetailContainer = ()=>{
@@ -35,7 +36,7 @@ export const ItemDetailContainer = ()=>{
 
     },[id])
 
-    if(loading){return <p>Cargando......</p>}
+    if(loading){return <SpinnerLoader></SpinnerLoader>}
 
     if(error){return <p>Error: {error}</p>}
 
