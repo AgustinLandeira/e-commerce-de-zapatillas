@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Item } from "../Item/Item"
 import './ItemList.css'
 export const Itemlist = ({listaProductos})=>{
@@ -13,7 +14,7 @@ export const Itemlist = ({listaProductos})=>{
 
                     <Item key={product.id} {...product}>
 
-                    <button className="producto-boton">Ver detalle</button>
+                    <Link to={`/productos/${product.id}`}><button className="producto-boton">Ver detalle</button></Link>
 
                     </Item>
 
