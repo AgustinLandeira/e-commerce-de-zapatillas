@@ -1,5 +1,6 @@
 import './App.css'
 import { Bienvenida } from './Components/Bienvenida/Bienvenida'
+import { Carrito } from './Components/Carrito/Carrito'
 import { Footer } from './Components/Footer/Footer'
 import { Header } from './Components/Header/Header'
 import { ItemDetailContainer } from './Components/ItemDetailContainer/ItemDetailContainer'
@@ -29,6 +30,7 @@ function App() {
 
             {/* Rutas dinamicas */}
             <Route path='/productos/:id' element={<ItemDetailContainer/>}></Route>
+            <Route path='/carrito' element={<Carrito/>}></Route>
 
         </Routes>
         
