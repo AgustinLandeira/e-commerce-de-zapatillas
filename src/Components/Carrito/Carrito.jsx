@@ -1,4 +1,4 @@
-
+import './Carrito.css'
 
 export const Carrito = ()=>{
 

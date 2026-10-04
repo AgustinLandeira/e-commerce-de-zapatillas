@@ -1,0 +1,84 @@
+.contenedor-carrito {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 50px auto;
+
+    background-color: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+
+/* -------------------------
+   TÍTULO
+------------------------- */
+
+.contenedor-carrito h1 {
+    margin: 0 0 10px;
+
+    color: #0b3d91;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+/* -------------------------
+   DESCRIPCIÓN
+------------------------- */
+
+.contenedor-carrito p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* -------------------------
+   RESPONSIVE
+------------------------- */
+
+@media (max-width: 768px) {
+
+    .contenedor-carrito {
+        width: 90%;
+
+        margin: 30px auto;
+
+        padding: 25px;
+    }
+
+    .contenedor-carrito h1 {
+        font-size: 25px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contenedor-carrito {
+        padding: 20px;
+    }
+
+    .contenedor-carrito h1 {
+        font-size: 22px;
+    }
+
+    .contenedor-carrito p {
+        font-size: 14px;
+    }
+
+}
