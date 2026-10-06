@@ -52,8 +52,6 @@ export const CarritoProvider = ({children})=>{ //nuestro celebro, proporciona in
             
         }
 
-        console.log(carrito)
-
     }
 
     const eliminarProductoCarrito = (id)=>{
@@ -74,6 +72,18 @@ export const CarritoProvider = ({children})=>{ //nuestro celebro, proporciona in
         return cantidadProductos
     }
 
+    const calcularTotal = ()=>{
+
+        let total = 0
+
+        for(let producto of carrito){
+            
+            total += producto.precio * producto.cantidad
+        }
+
+        return total
+    }
+
     const limpiarCarrito = ()=>{
 
         setCarrito([])
@@ -86,7 +96,8 @@ export const CarritoProvider = ({children})=>{ //nuestro celebro, proporciona in
         agregarItem,
         limpiarCarrito,
         eliminarProductoCarrito,
-        obtenerTotalProductos
+        obtenerTotalProductos,
+        calcularTotal
     }
 
     return(
