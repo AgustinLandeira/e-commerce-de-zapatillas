@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom'
 import { ItemDetail } from '../ItemDetail/ItemDetail';
 import { SpinnerLoader } from '../SpinnerLoader/SpinnerLoader';
 
+import {getProductByID} from '../../service/productsService'
 
 export const ItemDetailContainer = ()=>{
     const {id} = useParams();
@@ -12,25 +13,18 @@ export const ItemDetailContainer = ()=>{
     const [error,setError] = useState(null)
     const [loading,setLoading]= useState(true)
 
+    // CAMBIAR ACA POR LA FUNCION EN EL ARCHIVO DE FIREBASE
+
     useEffect(()=>{
 
         setLoading(true)
         setError(null)
         setItemDetail(null)
 
-        fetch("/data/productos.json")
-        .then((res)=>{
+        getProductByID(id)
+        .then((data)=> {
 
-            if(!res.ok){
-                throw new Error()
-            }
-
-            return res.json()
-        }).then((data)=> {
-
-            const producto = data.find((product)=> String(product.id )===id)
-            console.log(producto)
-            setItemDetail(producto)
+            setItemDetail(data)
         }).catch((err)=>setError(err.message))
         .finally(()=>setLoading(false))
 

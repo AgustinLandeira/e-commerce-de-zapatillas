@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
-import { Itemlist } from "../ItemList/ItemList"
-import { SpinnerLoader } from "../SpinnerLoader/SpinnerLoader";
+import {Itemlist} from '../ItemList/ItemList'
+
+import {getProducts} from '../../service/productsService'
+import { SpinnerLoader } from "../SpinnerLoader/SpinnerLoader"
 
 export const ItemListContainer = ()=>{
 
@@ -11,15 +13,8 @@ export const ItemListContainer = ()=>{
 
     useEffect(()=>{
 
-        fetch("/data/productos.json")
-        .then((response)=>{
-
-            if(!response.ok){
-
-                throw new Error()
-            }
-            return response.json()
-        })
+        // ACA REEMPLAZO EL FETCH Y USO LA FUNCION GET PRODUCTOS
+        getProducts()
         .then(data =>setProducts(data))
         .catch(err =>setError(err))
         .finally(()=>setLoad(false))
@@ -27,7 +22,7 @@ export const ItemListContainer = ()=>{
     },[])
 
     if(load){return(
-        <SpinnerLoader></SpinnerLoader>
+        <SpinnerLoader/>
     )}
 
     if(error){return <p>Error: {error}</p>}
