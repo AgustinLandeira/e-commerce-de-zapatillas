@@ -1,11 +1,15 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
+import './ProductFormContainer.css'
 import { ProductFormUI } from "./ProductFormUI"
+import { validateProducts } from "../../../utils/validateProducts"
+import { uploadImage } from "../../../service/uploadImage"
+import { createProduct } from "../../../service/productsService"
 
 export const ProductFormContainer = ()=>{
 
-    const navigate = useNavigate() // me lleva a ua ruta despues de un evento
+    const navigate = useNavigate()  //me lleva a ua ruta despues de un evento
 
     const [loading,setLoading] = useState(false)
     const [errors,setErrors] = useState({})
@@ -15,8 +19,8 @@ export const ProductFormContainer = ()=>{
     const [product,setProduct] = useState({
         nombre:"",
         precio:"",
-        categoria:"",
-        descripcion: ""
+        marca:"",
+        stock:""
     })
 
     const handleChange = (e)=>{
@@ -28,10 +32,12 @@ export const ProductFormContainer = ()=>{
     const handleFileChange = (e)=>{
         
         const file = e.target.files[0] || null
+        console.log("Guarde algo en file")
+        console.log(file)
         setFile(file)
     }
 
-    const handleSubmit = (e)=>{
+    const handleSubmit = async (e)=>{
 
         e.preventDefault(); //para prevenir el comportamiento por defecto
 
@@ -40,14 +46,45 @@ export const ProductFormContainer = ()=>{
 
         //validamos inpus
 
-        //subir imagenes
+        const newErrors = validateProducts({...product,imagen:file})
 
-        //armar estructura del producto
+        if(Object.keys(newErrors).length > 0){
+            setErrors(newErrors)
+            setLoading(false)
+            return;
+        }
 
-        //alta
+        try{
+            //subir imagenes
+            const urlImg = await uploadImage(file)
 
-        //baciar el formular
+            //armar estructura del producto
+            const productoNuevo = {
+                ...product,
+                precio: Number(product.precio)
+                ,imagen:urlImg
+            }
 
+            //alta
+            const productoID = await createProduct(productoNuevo)
+            console.log(productoID)
+
+            //Vaciar el formulario
+            setProduct({
+                nombre:"",
+                precio:"",
+                categoria:"",
+                descripcion: ""
+            })
+
+            setFile(null)
+            navigate(`/admin/producto/altaExito/${productoID}`,{replace:true})
+        }catch(error){
+            setErrors({ general: error.message });           
+        }finally{
+            setLoading(false)
+        }
+        
         //navegar a la pagina de exito
         
     }

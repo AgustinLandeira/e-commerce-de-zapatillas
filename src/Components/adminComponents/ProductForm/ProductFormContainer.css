@@ -1,0 +1,219 @@
+/* =====================================
+   CONTENEDOR PRINCIPAL
+===================================== */
+
+.product-form-section {
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/* =====================================
+   FORMULARIO
+===================================== */
+
+.product-form {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 35px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+
+    background-color: #ffffff;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =====================================
+   TÍTULO
+===================================== */
+
+.product-form-title {
+    margin: 0 0 10px;
+    padding-bottom: 18px;
+
+    color: #0b3d91;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    border-bottom: 2px solid #e5e7eb;
+}
+
+
+/* =====================================
+   GRUPOS DE CAMPOS
+===================================== */
+
+.product-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* =====================================
+   ETIQUETAS
+===================================== */
+
+.product-form-label {
+    color: #263449;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.product-form-input {
+    width: 100%;
+    padding: 12px 14px;
+    box-sizing: border-box;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+
+    background-color: #ffffff;
+    color: #172033;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.product-form-input:focus {
+    border-color: #0b3d91;
+
+    box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.12);
+}
+
+
+/* =====================================
+   INPUT DE ARCHIVO
+===================================== */
+
+.product-form-file {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+
+    border: 1px dashed #94a3b8;
+    border-radius: 7px;
+
+    background-color: #f8fafc;
+    color: #475569;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.product-form-file::file-selector-button {
+    margin-right: 12px;
+    padding: 8px 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #e0eaf9;
+    color: #0b3d91;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =====================================
+   ERRORES DE VALIDACIÓN
+===================================== */
+
+.product-form-error {
+    margin: 0;
+
+    color: #dc2626;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =====================================
+   BOTÓN GUARDAR
+===================================== */
+
+.product-form-button {
+    width: 100%;
+    padding: 14px 20px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 7px;
+
+    background-color: #0b3d91;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease,
+                transform 0.2s ease;
+}
+
+.product-form-button:hover:not(:disabled) {
+    background-color: #082f70;
+    transform: translateY(-1px);
+}
+
+.product-form-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.product-form-button:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+    .product-form-section {
+        padding: 25px 15px;
+    }
+
+    .product-form {
+        padding: 23px 20px;
+        gap: 19px;
+    }
+
+    .product-form-title {
+        font-size: 23px;
+    }
+}

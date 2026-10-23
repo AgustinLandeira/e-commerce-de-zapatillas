@@ -1,4 +1,6 @@
 import './App.css'
+import { ProductFormContainer } from './Components/adminComponents/ProductForm/ProductFormContainer'
+import { ProductSuccess } from './Components/adminComponents/ProductSuccess'
 import { Bienvenida } from './Components/Bienvenida/Bienvenida'
 import { CartView } from './Components/Carrito/CartView'
 import { Footer } from './Components/Footer/Footer'
@@ -31,6 +33,10 @@ function App() {
             {/* Rutas dinamicas */}
             <Route path='/productos/:id' element={<ItemDetailContainer/>}></Route>
             <Route path='/carritoVista' element={<CartView/>}></Route>
+
+            {/* Rutas del Admin */}
+            <Route path='/admin/producto/alta' element={<ProductFormContainer/>}></Route>
+            <Route path='/admin/producto/altaExito/:id' element={<ProductSuccess/>}></Route>
 
         </Routes>
         
