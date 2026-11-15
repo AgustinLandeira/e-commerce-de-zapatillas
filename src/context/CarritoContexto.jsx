@@ -7,7 +7,7 @@ export const UsarCarrito = ()=>{ //es un hook que nos facilita usar el contexto 
     const contexto = useContext(CarritoContexto)//sirve para obtener el value que proporcionó el Provider.
 
     if(!contexto){//detecta si un componente no tiene acceso al contexto
-        throw new Error("Debe usarso dentro de un Carrito Provider")
+        throw new Error("Debe usarse dentro de un Carrito Provider")
     }
 
     return contexto

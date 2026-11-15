@@ -3,6 +3,7 @@ import {BrowserRouter} from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 import { CarritoProvider } from './context/CarritoContexto.jsx'
+import { AuthProvider } from './context/AuthContext.jsx'
 
 createRoot(document.getElementById('root')).render(
 
@@ -10,10 +11,13 @@ createRoot(document.getElementById('root')).render(
   
     <BrowserRouter>
     
-    <CarritoProvider>
-      <App />
-    </CarritoProvider>
+      <AuthProvider>
 
+        <CarritoProvider>
+            <App />
+        </CarritoProvider>
+
+      </AuthProvider>
     </BrowserRouter>
 
    

@@ -80,7 +80,7 @@ export const ProductFormContainer = ()=>{
             setFile(null)
             navigate(`/admin/producto/altaExito/${productoID}`,{replace:true})
         }catch(error){
-            setErrors({ general: error.message });           
+            console.log(error)          
         }finally{
             setLoading(false)
         }
