@@ -32,10 +32,10 @@ export const AuthProvider = ({children})=>{
             setUser(firebaseUser)
             setloading(false)
 
-        },[])
+        })
 
         return unsubscribe
-    })
+    },[])
 
     const login = (email,password) =>{
 

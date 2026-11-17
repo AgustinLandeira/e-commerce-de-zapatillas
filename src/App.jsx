@@ -3,12 +3,12 @@ import { ProductFormContainer } from './Components/adminComponents/ProductForm/P
 import { ProductSuccess } from './Components/adminComponents/ProductSuccess'
 import { Bienvenida } from './Components/Bienvenida/Bienvenida'
 import { CartView } from './Components/Carrito/CartView'
-import { Footer } from './Components/Footer/Footer'
-import { Header } from './Components/Header/Header'
+// import { Footer } from './Components/Footer/Footer'
+// import { Header } from './Components/Header/Header'
 import { ItemDetailContainer } from './Components/ItemDetailContainer/ItemDetailContainer'
 import { ItemListContainer } from './Components/ItemListContainer/ItemListContainer'
 
-import {Navigate, Route, Routes,useLocation} from 'react-router-dom'
+import {Navigate, Route, Routes} from 'react-router-dom'
 import { Login } from './Components/login/login'
 import { PublicLayout } from './Components/layouts/PublicLayout'
 import { ProtectedRoute } from './Components/ProtetedRoute/ProtectedRoute'
@@ -17,9 +17,9 @@ import { Dashboard } from './Components/adminComponents/Dashboard/Dashboard'
 
 function App() {
 
-  const ruta = useLocation() //me dice en que ruta estoy
+  // const ruta = useLocation() //me dice en que ruta estoy
 
-  const esInicio = ruta.pathname === "/"
+  // const esInicio = ruta.pathname === "/"
 
   // EL componente login va afuera del adminlayout porque el protedted router me pide que este logueado para el login, por eso esta afuera
   
@@ -27,7 +27,7 @@ function App() {
 
     <>
 
-      {!esInicio && <Header/>}
+      {/* {!esInicio && <Header/>} */}
 
       {/* routes: para agrupar las rutas de mi app, se asegura que solo una coincide y se renderice */}
       <Routes>
@@ -69,7 +69,7 @@ function App() {
       </Routes>
         
       
-      {!esInicio && <Footer/>}
+      {/* {!esInicio && <Footer/>} */}
     
     </>
     

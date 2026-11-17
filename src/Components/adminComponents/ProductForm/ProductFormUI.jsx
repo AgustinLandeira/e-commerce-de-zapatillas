@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const ProductFormUI = ({product, errors, loading, onChange, onFileChange, onSubmit})=>{
 
     return<section className="product-form-section">
@@ -41,6 +43,8 @@ export const ProductFormUI = ({product, errors, loading, onChange, onFileChange,
             </div>
 
             <button className="product-form-button" type="submit" disabled={loading}>{loading ? "Guardando...":"Guardar"}</button>
+            <button className="product-form-button" type="button"><Link className="product-form-button" to="/admin/dashboard">Volver al panel de administracion</Link></button>
         </form>
     </section>
+
 }
