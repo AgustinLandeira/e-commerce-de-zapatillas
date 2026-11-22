@@ -1,5 +1,7 @@
 import { UsarCarrito } from '../../context/CarritoContexto'
 
+import "./Cart.css"
+
 import Swal from 'sweetalert2'
 export const CartBuy = ({monto}) => {
 

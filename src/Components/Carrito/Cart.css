@@ -252,6 +252,78 @@
     font-weight: 700;
 }
 
+/* Resumen de compra */
+
+.Contenedor-pagar {
+    width: 90%;
+    max-width: 450px;
+    margin: 35px auto;
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dce5ef;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    box-sizing: border-box;
+}
+
+.Contenedor-pagar h3 {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e0e6ed;
+    color: #0d1b2a;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    .Contenedor-pagar {
+        width: 95%;
+        padding: 22px 18px;
+    }
+
+    .Contenedor-pagar h3 {
+        font-size: 19px;
+    }
+}
+
+/* Botón de compra */
+
+.Contenedor-pagar button {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1d72d8;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.Contenedor-pagar button:hover {
+    background-color: #155bb0;
+    transform: translateY(-2px);
+}
+
+.Contenedor-pagar button:active {
+    transform: translateY(0);
+}
+
+.Contenedor-pagar button:disabled {
+    background-color: #aab8c7;
+    cursor: not-allowed;
+    transform: none;
+}
+
 
 /* ========================================
    TABLET
