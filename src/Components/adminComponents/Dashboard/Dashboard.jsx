@@ -49,13 +49,12 @@ export const Dashboard = ()=>{
                         <span>Agregar producto</span>
                     </Link>
 
-                    <button
-                        className="dashboard-action dashboard-action-disabled"
-                        disabled
-                    >
+                    <Link className="dashboard-action dashboard-action-primary" to="/admin/productos">
+
+                    
                         <span className="dashboard-action-icon">✏️</span>
                         <span>Modificar producto</span>
-                    </button>
+                    </Link>
 
                     <button
                         className="dashboard-action dashboard-action-disabled"

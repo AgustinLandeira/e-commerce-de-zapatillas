@@ -14,6 +14,7 @@ import { PublicLayout } from './Components/layouts/PublicLayout'
 import { ProtectedRoute } from './Components/ProtetedRoute/ProtectedRoute'
 import { AdminLayout } from './Components/layouts/AdminLayout'
 import { Dashboard } from './Components/adminComponents/Dashboard/Dashboard'
+import { ProductListContainer } from './Components/adminComponents/ProductList/ProductListContainer'
 
 function App() {
 
@@ -62,6 +63,7 @@ function App() {
             <Route path='dashboard' element={<Dashboard/>}/>
             <Route path='/admin/producto/alta' element={<ProductFormContainer/>}></Route>
             <Route path='/admin/producto/altaExito/:id' element={<ProductSuccess/>}></Route>
+            <Route path='/admin/productos' element={<ProductListContainer/>}></Route>
           </Route>
 
           {/* Rutas del Admin */}

@@ -1,7 +1,8 @@
 //Aca separamos los servicios(se relaciona con la colleccion de products)
 
-import { addDoc, collection, doc, getDoc, getDocs } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc, getDoc, getDocs } from "firebase/firestore";
 import { db } from "../firebase/config";
+import Swal from "sweetalert2";
 
 //tomamos referencia de la coleccion y de los documentos
 const productsRef = collection(db,"products")//parametros:base de datos y nombre de la coleccion
@@ -68,4 +69,29 @@ export const createProduct = async(productData)=>{
     }
 
 
+}
+//Eliminamos el producto
+export const deleteProduct = async(id)=>{
+
+    try{
+        // Obtenemos la referencia al documento mediante su ID
+        const productRef = doc(productsRef,id)
+
+        //eliminamos el documento
+
+        await deleteDoc(productRef).then(()=>{
+
+            Swal.fire({
+                title:"Producto eliminado !",
+                text:"Eliminaste con exito el producto",
+                icon:"success",
+                confirmButtonColor: "#3085d6",
+                confirmButtonText:"OK"
+            })
+        })
+
+    }catch(error){
+        console.log("Error al eliminar el producto", error)
+        throw error
+    }
 }
